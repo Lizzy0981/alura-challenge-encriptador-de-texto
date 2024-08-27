@@ -1,0 +1,607 @@
+   /* DISEÑO PARA PANTALLAS FULL HD */
+   main{
+    background:linear-gradient(50deg,#f2f4f6 60%,#f3dfca);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Inter', sans-serif;
+    min-height: 55.56rem;
+    height: auto;
+}
+
+.ingreso-texto{
+    text-align: center;
+    width: 60%;
+    display: inline-block;
+    position: relative;
+}
+
+#logoAlura{
+    text-align: left;
+    padding: 1.8% 1.4% 1.4% 2.8%;
+}
+
+#areaTextoIngreso{
+    margin: 2.8% 1.4% 1.4% 1.4%;
+}
+
+textarea{
+    border: none;
+    resize: none;
+    text-align: left;
+    font-size: 2rem;
+    color: #673010;
+    background: none;
+    outline: 0;
+    font-family: 'Inter', sans-serif;
+    height: 35.2rem;
+}
+
+textarea::placeholder{
+    color: #673010;
+    font-size: 2.5rem;
+    font-family: 'Inter', sans-serif;
+}
+
+#info{
+    font-size: 1.2rem;
+    color: rgb(82 76 76 / 77%);
+    text-align: left;
+    padding: 0 14%;   
+}
+
+#info img{
+    float: left;
+}
+
+#info p{
+    padding: 0 1.5rem;
+}
+
+#botones{
+    margin: 1.4% 0;
+    padding: 1.4% 1.4%;
+}
+
+.boton-grande{
+    padding: 2.1%;
+    font-size: 1.7rem;
+    border: .15rem #673010 solid;
+    width: 32%;
+    border-radius: 1.7rem;
+    box-shadow: 0.15rem 0.15rem 0.6rem #0e0e0e96;
+}
+
+button:hover{
+    cursor: pointer;
+    scale: 1.06;
+    transition: 400ms;
+}
+
+#encriptar{
+    margin: 0rem 5.6% 0rem 1.4%;
+    background-color: #673010;
+    color: #e5d6c7c0;
+}
+
+#desencriptar{
+    margin: 0 1.4% 0 5.6%;
+    background-color: rgba(229, 214, 199, 0.753);
+    color: #673010;
+}
+
+.sale-texto{
+    text-align: center;
+    width: 39%;
+    display: inline-block;
+    position: relative;
+    vertical-align: top; 
+}
+
+.derecha{
+    width: 68%;
+    background:#fff7ede3;
+    margin: 7rem 7rem 3rem 6rem;
+    padding: 6rem 1rem 9rem 1rem;
+    border: none;
+    border-radius: 2rem;
+    box-shadow: 0 1.4rem 2rem -.5rem rgba(0, 0, 0, 0.08);
+}
+
+.derecha img{
+    position: relative;
+    z-index: 2;
+}
+#textoNoEncontrado h2{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #5a4538;
+    padding: 2rem 2rem;
+}
+
+.derecha p{
+    font-size: 1.4rem;
+    color: #604535;
+    margin: 0 1.7rem;
+    text-align: left;
+}
+
+#muñeco{
+    position: relative;
+    z-index: 1;
+    height: 30rem; 
+}
+
+#muñeco p{
+    text-align: center;
+}
+#textoEncontrado{    
+    font-size: 2rem;
+    display: none;
+    position: relative;
+    z-index: 3;
+    padding: 3rem 1rem 7rem 1rem;
+    min-height: 32.6rem;
+    word-wrap: break-word;
+  
+}
+
+#textoSalida{
+    font-size: 2rem;
+    font-family: 'Inter', sans-serif;
+    width: 25rem;
+}
+
+#copiar{
+    border: .3rem #673010 solid;
+    border-radius: 1rem;
+    background-color: #673010;
+    box-shadow: 0.15rem 0.15rem 0.6rem #00000096;
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+}
+#copiar img{
+    width: auto;
+    margin: .3rem .3rem;
+    height: 3rem;  
+}
+
+#textoCopiado{
+    display: block;
+    position: absolute;
+    bottom: 3rem;
+    left: 20%;
+    background: #ffc6888f;
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+    font-size: .7rem;
+    box-shadow: 0.15rem 0.15rem 0.6rem #00000096;
+    transition: opacity .5s;
+    opacity: 0; 
+}
+
+#textoCopiado p{
+    margin: auto 1.7rem;
+    font-size: 1.3rem;
+}
+
+footer{
+    background-color: #321301;
+    height: fit-content;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+footer div{
+    margin: 1.6% auto;
+    display: inline-block;
+    vertical-align: top;
+}
+
+footer p{
+    text-align: center;
+    color: #e9ceb2;
+    display: inline-block;      
+}
+
+span{
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #e9ceb2;
+    margin: auto .2rem;
+}
+
+footer ul{
+    display: inline-block;
+    margin: .6rem .6rem;
+    vertical-align: bottom;
+}
+
+li{
+    display: inline-block;
+    scale: .7;
+    margin: 0rem .3rem;
+}
+
+/*DISEÑO ESCRITORIO ALURA*/
+
+@media screen and (max-width:1440px){
+    main{
+        min-height: 58.59rem;
+    }
+    #logoAlura{
+        padding: 3.8% 4.5%;
+        
+    }
+    #areaTextoIngreso{
+        margin: 4.7% 15%;
+    }
+
+    textarea{
+        width: 39rem;
+    }
+
+    #info{
+        margin: 2% 1%;
+    }
+
+    #botones{
+        margin: 1% 1%;
+    }
+
+    .sale-texto{
+        width: 38%;
+        vertical-align: top; 
+    }
+    
+    .derecha{
+        margin: 26.8% 8.6% 4% 8.4%;
+        padding: 17% 4% 30% 4%;
+    }
+
+    #muñeco{
+        padding: 27% 4% 20% 4%;
+    }
+
+    #textoEncontrado{
+        padding: 3rem 1rem 7.7rem 1rem;
+    }
+
+    #textoSalida{
+        width: 18.5rem;
+    }
+
+    #copiar{
+        bottom: 1.5rem;
+    }
+
+    #textoCopiado{
+        left: 13%;
+        padding: 0.4rem 0rem;
+    }
+
+    #textoCopiado p{
+        font-size: 1.2rem;
+    }
+
+
+}
+
+/* DISEÑO PANTALLAS HD */
+@media screen and (width: 1366px){
+    main{
+        min-height: 43rem;
+    }
+
+    .ingreso-texto{
+        scale: .98;
+    }
+    
+    textarea{
+        height: 100%;
+    }
+    .sale-texto{
+        scale: .98;
+    }
+    #areaTextoIngreso{
+        height: 23rem;
+    }
+
+    #muñeco{
+        height: 22.7rem;
+        margin: 19% 0px 5% 0;
+        padding: 11% 4% 30% 4%;
+    }
+
+    #muñeco img{
+        scale: .8;
+    }
+
+    #muñeco h2{
+        font-size: 1.8rem;
+        padding: 3% 0;
+    }
+
+    #muñeco p{
+        font-size: 1.3rem;
+        margin: 8%;
+    }
+
+    #textoEncontrado{
+        min-height: 25.7rem;
+        margin: 19% 0px 7% 0;
+        padding: 3rem 1rem 6.7rem 1rem;
+    }
+
+    #textoSalida{
+        width: 18rem;
+        height: 24rem;
+    }
+
+    #copiar{
+        scale: .9;
+    }
+
+    footer div{
+        scale: .9;
+    }
+    
+    footer ul{
+        scale: .8;
+        margin: 0px 0;
+        left: -1%;
+        position: relative;
+    }
+}
+
+/* DISEÑO PARA LA TABLET */
+
+@media screen and (max-width:768px){
+    main{
+        min-height: 67.25rem;
+    }
+    #logoAlura{
+        margin: 2rem 1rem 2rem 1rem;
+        padding: 1rem 1rem 1rem 2rem;
+    }
+
+    .ingreso-texto{
+        width: 100%;
+    }
+
+    #areaTextoIngreso{
+        margin: 2rem 2.6rem;
+        height: 31rem;
+    }
+
+    textarea{
+        height: 30rem;
+        width: 88%;
+    }
+
+    #info{
+        margin: 1rem 1rem;
+        padding: 1rem 1rem;
+    }
+
+    .sale-texto{
+        width: 100%;  
+    }
+
+    #botones{
+        margin: 1rem 1rem;
+        padding: 0rem 1rem;
+    }
+
+   .boton-grande{
+    width: 18rem;
+   }
+
+    #encriptar{
+        margin: 1rem 1.5rem;
+        padding: 1rem 1rem;
+    }
+
+    #desencriptar{
+        margin: 1rem 1.5rem;
+        padding: 1rem 1rem;
+    }
+
+    .derecha{
+        text-align: center;
+    }
+
+    #muñeco{
+        padding: 1rem 1rem 1rem 1rem;
+        height: fit-content;
+        width: 84%;
+        margin: 0.5rem auto 2rem auto;
+    }
+
+    #muñeco img{
+        display: none;
+    }
+
+    #textoNoEncontrado p{
+        margin: 1rem 0rem 1rem 0rem;
+    }
+
+    #textoEncontrado{
+        padding: 2rem 1rem 4.8rem 1rem;
+        height: fit-content;
+        min-height: 5rem;
+        width: 84%;
+        margin: 0rem auto 2rem auto;
+    }
+
+    #textoSalida{
+        width: 35rem;
+        height: 16rem;
+    }
+
+    #copiar{
+        bottom: 0.6rem;
+        right: 1rem;
+        scale: .8;
+        float: right;
+    }
+
+    #textoCopiado{
+        bottom: 1.6rem;
+        left: 30%;
+        padding: 0.4rem 1rem;
+        border-radius: 2rem;
+        font-size: .7rem;
+    }
+    
+    #textoCopiado p{
+        margin: auto 1.7rem;
+    }
+
+    footer div{
+        margin: 5.1% auto;
+    }
+    footer ul{
+        margin: 1rem 0.4rem;
+    }
+}
+/* DISEÑO PARA EL CELULAR*/
+
+@media screen and (max-width:490px){
+    main{
+        min-height: 52.8rem;
+        height: auto;
+    } 
+
+    #logoAlura{
+        margin: 1rem 1rem 1rem 0rem;
+        padding: 1rem 1rem;
+        scale: .9;
+    }
+
+    #areaTextoIngreso{
+        margin: 1.7rem 1.6rem 1rem 1.6rem;
+        height: 18rem;
+    }
+
+    textarea{
+        height: 100%;
+        width: 88%;
+        font-size: 1.6rem;
+    }
+    
+    textarea::placeholder{
+        font-size: 2rem;
+    }
+
+    #info{
+        margin: 0.7rem 1rem;
+        padding: 1rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    #botones{
+        text-align: center;
+        padding: 0rem 0rem;
+    }
+
+   .boton-grande{
+    width: 21rem;
+   }
+
+    #encriptar{
+        margin: 0.6rem auto;
+        padding: 1rem 1rem;
+        display: block;
+        scale: .8;
+    }
+
+    #desencriptar{
+        margin: 0.6rem auto;
+        padding: 1rem 1rem;
+        display: block;
+        scale: .8;
+    }
+
+    .derecha{
+        padding: 1rem 1rem;
+        margin: 1rem 1rem;
+    }
+
+    .derecha p{
+        font-size: 1rem;
+        margin: 0 0.4rem;
+    }
+    #muñeco{
+        height: 7.8rem;
+        width: 74%;
+    }
+
+    #textoNoEncontrado h2{
+        font-size: 1.5rem;
+        padding: 1rem 1rem; 
+    }
+
+    #textoNoEncontrado p{
+        margin: 0rem 0rem 1rem 0rem;
+    }
+
+    #textoEncontrado{    
+        width: 74%;
+        padding: 1rem 1rem 5.5rem 1rem;
+        min-height: 6rem;
+    }
+
+
+    #textoSalida{
+        font-size: 1.6rem;
+        width: 88%;
+    }
+
+    #copiar{
+        scale: .7;
+        bottom: 0.3rem;
+        right: 0.6rem;
+    }
+
+    #textoCopiado{
+        bottom: 1.3rem;
+        left: 19%;
+        padding: 0.4rem 0rem;
+        border-radius: 2rem;
+        font-size: .5rem;
+    }
+    
+    #textoCopiado p{
+        margin: auto 0.7rem;
+        font-size: 1rem;
+    }
+    
+    footer{
+        position: relative;
+        bottom: 0;
+    }
+
+    footer div{
+        margin: 0.25rem 1rem 0rem 1rem;
+    }
+
+    footer p{
+        font-size: .6rem;
+    }
+
+    footer span{
+        font-size: .8rem;
+    }
+
+    footer ul{
+        margin: 0rem 1rem;
+        display: block;
+    }
+
+    li{
+        scale: .55;
+        margin: 0rem 0rem;
+    }
+
+}
