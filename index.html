@@ -6,20 +6,27 @@
     <title>Alura Challenge - Encriptador de Texto</title>
     <link rel="shortcut icon" href="imagenes/encriptador.jpeg" type="image/x-icon">
     <link rel="stylesheet" href="reset.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
     <main>
         <section class="ingreso-texto">
             <div id="logoAlura"><img src="imagenes/logoalura.png" alt="logo de alura"></div>
-            <div id="areaTextoIngreso"> <textarea cols="45" rows="15" placeholder="Ingrese texto aquí..."></textarea></div>
-            <div id="info"><img src="imagenes/vector.png" alt="signo de advertencia"><p>Solo letras minúsculas y sin acentos.</p></div>
-            <div id="botones"><button class="boton-grande" id="encriptar">Encriptar</button> <button class="boton-grande" id="desencriptar">Desencriptar</button></div>
-
+            <div id="areaTextoIngreso"> 
+                <textarea cols="45" rows="15" placeholder="Ingrese texto aquí..."></textarea>
+            </div>
+            <div id="info">
+                <img src="imagenes/vector.png" alt="signo de advertencia">
+                <p>Solo letras minúsculas y sin acentos.</p>
+            </div>
+            <div id="botones">
+                <button class="boton-grande" id="encriptar">Encriptar</button>
+                <button class="boton-grande" id="desencriptar">Desencriptar</button>
+            </div>
         </section>
-
 
         <section class="sale-texto">
             <div class="derecha" id="muñeco">
@@ -31,19 +38,28 @@
             </div>
             <div class="derecha" id="textoEncontrado">
                 <textarea cols="45" rows="10" id="textoSalida"></textarea>
-                <button id="copiar"><img src="imagenes/copiar.png" alt="boton copiar"></button>
-                <div id="textoCopiado"><p>Texto copiado.</p></div>
+                <button id="copiar">
+                    <img src="imagenes/copiar.png" alt="boton copiar">
+                </button>
+                <div id="textoCopiado">
+                    <p>Texto copiado.</p>
+                </div>
             </div>
         </section>
     </main>
     <footer>
-        <div><p>Creado por</p><span> Elizabeth Diaz Familia</span></div>
+        <div>
+            <p>Creado por</p><span> Elizabeth Diaz Familia</span>
+        </div>
         <ul>
-            <li><a href="https://linkedin.com/in/eli-familia/" target="_blank"><img src="imagenes/linkedin.png" alt="linkedin"></a></li>
-            <li><a href="https://github.com/Lizzy0981" target="_blank"><img src="imagenes/github.png" alt="github"></a></li>
+            <li><a href="https://linkedin.com/in/eli-familia/" target="_blank">
+                <img src="imagenes/linkedin.png" alt="linkedin">
+            </a></li>
+            <li><a href="https://github.com/Lizzy0981" target="_blank">
+                <img src="imagenes/github.png" alt="github">
+            </a></li>
         </ul>
     </footer>
+    <script src="script.js"></script>
 </body>
-<script src="encriptador.js"></script>
-
 </html>
