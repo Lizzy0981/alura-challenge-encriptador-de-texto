@@ -15,41 +15,43 @@
     <main>
         <section class="ingreso-texto">
             <div id="logoAlura"><img src="imagenes/logoalura.png" alt="logo de alura"></div>
-            <div id="areaTextoIngreso"> 
-                <textarea cols="45" rows="15" placeholder="Ingrese texto aquí..."></textarea>
+            <div id="areaTextoIngreso">
+                <textarea id="textoIngreso" cols="45" rows="15" placeholder="Ingrese texto aquí..."></textarea>
             </div>
             <div id="info">
                 <img src="imagenes/vector.png" alt="signo de advertencia">
                 <p>Solo letras minúsculas y sin acentos.</p>
             </div>
             <div id="botones">
-                <button class="boton-grande" id="encriptar">Encriptar</button>
-                <button class="boton-grande" id="desencriptar">Desencriptar</button>
+                <button class="boton-grande" id="encriptar" onclick="encriptar()">Encriptar</button>
+                <button class="boton-grande" id="desencriptar" onclick="desencriptar()">Desencriptar</button>
             </div>
         </section>
 
         <section class="sale-texto">
-            <div class="derecha" id="muñeco">
-                <img src="imagenes/Muñeco.png" alt="Muñeco buscando mensaje">
+            <!-- Contenedor reutilizado para el muñeco, imágenes de encriptado/desencriptado y resultados -->
+            <div class="derecha" id="resultado">
+                <img id="imagenMuñeco" src="imagenes/Muñeco.png" alt="Muñeco buscando mensaje">
+                <img id="imagenEncriptado" src="imagenes/Encriptado.jpg" alt="Texto encriptado" style="display:none;">
+                <img id="imagenDesencriptado" src="imagenes/Desencriptado.jpg" alt="Texto desencriptado" style="display:none;">
                 <div id="textoNoEncontrado">
                     <h2>Ningún mensaje fue encontrado.</h2>
                     <p>Ingresa el texto que desees encriptar o desencriptar.</p>
                 </div>
-            </div>
-            <div class="derecha" id="textoEncontrado">
-                <textarea cols="45" rows="10" id="textoSalida"></textarea>
-                <button id="copiar">
-                    <img src="imagenes/copiar.png" alt="boton copiar">
-                </button>
-                <div id="textoCopiado">
-                    <p>Texto copiado.</p>
+                <div id="textoEncontrado" style="display:none;">
+                    <textarea id="textoSalida" cols="45" rows="10"></textarea>
+                    <button id="copiar" onclick="copiarTexto()">
+                        <img src="imagenes/copiar.png" alt="boton copiar">
+                    </button>
+                    <div id="textoCopiado" style="display:none;"><p>Texto copiado.</p></div>
                 </div>
             </div>
         </section>
     </main>
     <footer>
         <div>
-            <p>Creado por</p><span> Elizabeth Diaz Familia</span>
+            <p>Creado por</p>
+            <span>Elizabeth Diaz Familia</span>
         </div>
         <ul>
             <li><a href="https://linkedin.com/in/eli-familia/" target="_blank">
