@@ -11,10 +11,13 @@ Este proyecto es un encriptador y desencriptador de texto simple pero elegante, 
 - Funcionalidad de copiar al portapapeles
 - Diseño adaptable a diferentes tamaños de pantalla
 
-##Modo Oscuro
+## Modo Oscuro
 
+![Captura de pantalla_29-9-2024_18](https://github.com/user-attachments/assets/bdf68a2a-3c84-4bea-b5c7-edfc1a445cb4)
 
-##Modo Claro
+## Modo Claro
+![Captura de pantalla_29-9-2024_18 (1)](https://github.com/user-attachments/assets/080aaa85-b9c3-4e88-8b8f-ee9cdc01fa6b)
+
 
 ## Tecnologías Utilizadas
 
