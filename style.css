@@ -1,453 +1,233 @@
 /* Estilos generales */
+:root {
+    --bg-color: #f2f4f6;
+    --text-color: #673010;
+    --button-bg: #673010;
+    --button-text: #e5d6c7c0;
+    --footer-bg: #321301;
+    --footer-text: #e9ceb2;
+}
+
 body {
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(50deg,#f2f4f6 60%,#f3dfca);
+    background: linear-gradient(50deg, var(--bg-color) 60%, #f3dfca);
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: background-color 0.3s ease;
+}
+
+body.dark-mode {
+    --bg-color: #1a1a1a;
+    --text-color: #e5d6c7;
+    --button-bg: #4a2208;
+    --button-text: #f2f4f6;
+    --footer-bg: #0d0d0d;
+    --footer-text: #f2f4f6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+#darkModeToggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 main {
-    min-height: 55.56rem;
-    height: auto;
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem;
 }
 
-.ingreso-texto {
-    text-align: center;
-    width: 60%;
-    display: inline-block;
-    position: relative;
-}
-
-#logoAlura {
-    text-align: left;
-    padding: 1.8% 1.4% 1.4% 2.8%;
-}
-
-#areaTextoIngreso {
-    margin: 2.8% 1.4% 1.4% 1.4%;
+.ingreso-texto, .sale-texto {
+    flex: 1;
+    min-width: 300px;
+    margin: 1rem;
 }
 
 textarea {
+    width: 100%;
+    height: 200px;
     border: none;
     resize: none;
-    text-align: left;
-    font-size: 2rem;
-    color: #673010;
+    font-size: 1.2rem;
+    color: var(--text-color);
     background: none;
     outline: 0;
-    font-family: 'Inter', sans-serif;
-    height: 35.2rem;
-}
-
-textarea::placeholder {
-    color: #673010;
-    font-size: 2.5rem;
-    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
 }
 
 #info {
-    font-size: 1.2rem;
-    color: rgb(82 76 76 / 77%);
-    text-align: left;
-    padding: 0 14%;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin-top: 1rem;
 }
 
 #info img {
-    float: left;
-}
-
-#info p {
-    padding: 0 1.5rem;
+    margin-right: 0.5rem;
 }
 
 #botones {
-    margin: 1.4% 0;
-    padding: 1.4% 1.4%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
 }
 
 .boton-grande {
-    padding: 2.1%;
-    font-size: 1.7rem;
-    border: .15rem #673010 solid;
-    width: 32%;
-    border-radius: 1.7rem;
-    box-shadow: 0.15rem 0.15rem 0.6rem #0e0e0e96;
-}
-
-button:hover {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border: 2px solid var(--button-bg);
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border-radius: 0.5rem;
     cursor: pointer;
-    scale: 1.06;
-    transition: 400ms;
+    transition: all 0.3s ease;
 }
 
-#encriptar {
-    margin: 0rem 5.6% 0rem 1.4%;
-    background-color: #673010;
-    color: #e5d6c7c0;
-}
-
-#desencriptar {
-    margin: 0 1.4% 0 5.6%;
-    background-color: rgba(229, 214, 199, 0.753);
-    color: #673010;
-}
-
-.sale-texto {
-    text-align: center;
-    width: 39%;
-    display: inline-block;
-    position: relative;
-    vertical-align: top;
+.boton-grande:hover {
+    transform: scale(1.05);
 }
 
 .derecha {
-    width: 68%;
-    background: #fff7ede3;
-    margin: 7rem 7rem 3rem 6rem;
-    padding: 6rem 1rem 9rem 1rem;
-    border: none;
-    border-radius: 2rem;
-    box-shadow: 0 1.4rem 2rem -.5rem rgba(0, 0, 0, 0.08);
-    text-align: center; /* Para centrar el contenido */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
-/* Mostrar la imagen del muñeco inicialmente */
-#imagenMuñeco {
-    display: block;
-    width: 80%; /* Ajustar el tamaño según sea necesario */
-    margin: 0 auto;
-}
-
-#imagenEncriptado, #imagenDesencriptado {
-    display: none; /* Escondemos las imágenes de encriptado/desencriptado inicialmente */
-}
-
-#textoNoEncontrado {
-    text-align: center;
-    display: block;
+#imagenMuñeco, #imagenEncriptado, #imagenDesencriptado {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
 }
 
 #textoNoEncontrado h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #5a4538;
-    padding: 2rem 2rem;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
 }
 
 #textoNoEncontrado p {
-    font-size: 1.4rem;
-    color: #604535;
-    margin: 0 1.7rem;
-    text-align: left;
-}
-
-#textoEncontrado {
-    font-size: 2rem;
-    display: none; /* Se muestra cuando se encripta o desencripta */
-    position: relative;
-    z-index: 3;
-    padding: 3rem 1rem 7rem 1rem;
-    min-height: 32.6rem;
-    word-wrap: break-word;
-    margin-top: 2rem; /* Espacio adicional para que no se superponga */
-}
-
-#textoSalida {
-    font-size: 2rem;
-    font-family: 'Inter', sans-serif;
-    width: 25rem;
+    font-size: 1rem;
+    color: var(--text-color);
 }
 
 #copiar {
-    border: .3rem #673010 solid;
-    border-radius: 1rem;
-    background-color: #673010;
-    box-shadow: 0.15rem 0.15rem 0.6rem #00000096;
-    margin-top: 1rem;
-    display: flex; /* Añadido para alinear el botón e imagen */
+    display: flex;
     align-items: center;
     justify-content: center;
-    width: 150px; /* Tamaño ajustable */
-    height: 50px; /* Tamaño ajustable */
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#copiar:hover {
+    transform: scale(1.05);
 }
 
 #copiar img {
-    width: 20px; /* Ajusta el tamaño del icono dentro del botón */
-    margin-left: 5px;
+    width: 20px;
+    margin-right: 0.5rem;
 }
 
 #textoCopiado {
-    display: block;
-    position: absolute;
-    bottom: 3rem;
-    left: 20%;
-    background: #ffc6888f;
-    padding: 0.4rem 1rem;
-    border-radius: 2rem;
-    font-size: .7rem;
-    box-shadow: 0.15rem 0.15rem 0.6rem #00000096;
-    transition: opacity .5s;
-    opacity: 0;
-}
-
-#textoCopiado p {
-    margin: auto 1.7rem;
-    font-size: 1.3rem;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+    transition: opacity 0.3s ease;
 }
 
 footer {
-    background-color: #321301;
-    height: fit-content;
-    font-family: 'Inter', sans-serif;
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
     text-align: center;
-}
-
-footer div {
-    margin: 1.6% auto;
-    display: inline-block;
-    vertical-align: top;
-}
-
-footer p {
-    text-align: center;
-    color: #e9ceb2;
-    display: inline-block;
-}
-
-span {
-    font-size: 1.3rem;
-    font-style: italic;
-    color: #e9ceb2;
-    margin: auto .2rem;
+    padding: 1rem;
+    margin-top: 2rem;
 }
 
 footer ul {
-    display: inline-block;
-    margin: .6rem .6rem;
-    vertical-align: bottom;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
 }
 
-li {
-    display: inline-block;
-    scale: .7;
-    margin: 0rem .3rem;
+footer li {
+    margin: 0 0.5rem;
 }
 
-/* Media Queries para diferentes dispositivos */
-/* Diseño para pantallas full HD */
-@media screen and (max-width:1440px) {
+footer img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+footer img:hover {
+    transform: scale(1.1);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
     main {
-        min-height: 58.59rem;
+        flex-direction: column;
     }
-    #logoAlura {
-        padding: 3.8% 4.5%;
-    }
-    #areaTextoIngreso {
-        margin: 4.7% 15%;
-    }
-    textarea {
-        width: 39rem;
-    }
-    #info {
-        margin: 2% 1%;
-    }
-    #botones {
-        margin: 1% 1%;
-    }
-    .sale-texto {
-        width: 38%;
-        vertical-align: top;
-    }
-    .derecha {
-        margin: 26.8% 8.6% 4% 8.4%;
-        padding: 17% 4% 30% 4%;
-    }
-    #imagenMuñeco, #textoEncontrado {
-        width: 70%;
-    }
-}
 
-/* Diseño para pantallas HD */
-@media screen and (width: 1366px) {
-    main {
-        min-height: 43rem;
-    }
-    .ingreso-texto {
-        scale: .98;
-    }
-    textarea {
-        height: 100%;
-    }
-    .sale-texto {
-        scale: .98;
-    }
-    #areaTextoIngreso {
-        height: 23rem;
-    }
-    #imagenMuñeco, #textoEncontrado {
-        width: 65%;
-    }
-    #copiar {
-        scale: .9;
-    }
-    footer div {
-        scale: .9;
-    }
-    footer ul {
-        scale: .8;
-        margin: 0px 0;
-        left: -1%;
-        position: relative;
-    }
-}
-
-/* Diseño para tabletas */
-@media screen and (max-width:768px) {
-    main {
-        min-height: 67.25rem;
-    }
-    #logoAlura {
-        margin: 2rem 1rem 2rem 1rem;
-        padding: 1rem 1rem 1rem 2rem;
-    }
-    .ingreso-texto {
+    .ingreso-texto, .sale-texto {
         width: 100%;
     }
-    #areaTextoIngreso {
-        margin: 2rem 2.6rem;
-        height: 31rem;
-    }
-    textarea {
-        height: 30rem;
-        width: 88%;
-    }
-    #info {
-        margin: 1rem 1rem;
-        padding: 1rem 1rem;
-    }
-    .sale-texto {
-        width: 100%;
-    }
+
     #botones {
-        margin: 1rem 1rem;
-        padding: 0rem 1rem;
+        flex-direction: column;
     }
+
     .boton-grande {
-        width: 18rem;
-    }
-    #encriptar {
-        margin: 1rem 1.5rem;
-        padding: 1rem 1rem;
-    }
-    #desencriptar {
-        margin: 1rem 1.5rem;
-        padding: 1rem 1rem;
-    }
-    .derecha {
-        text-align: center;
-    }
-    #imagenMuñeco, #textoEncontrado {
-        width: 90%;
-    }
-    #copiar {
-        bottom: 0.6rem;
-        right: 1rem;
-        scale: .8;
-        float: right;
+        margin-bottom: 1rem;
     }
 }
 
-/* Diseño para móviles */
-@media screen and (max-width:490px) {
-    main {
-        min-height: 52.8rem;
-        height: auto;
-    }
-    #logoAlura {
-        margin: 1rem 1rem 1rem 0rem;
-        padding: 1rem 1rem;
-        scale: .9;
-    }
-    #areaTextoIngreso {
-        margin: 1.7rem 1.6rem 1rem 1.6rem;
-        height: 18rem;
-    }
+@media screen and (max-width: 480px) {
     textarea {
-        height: 100%;
-        width: 88%;
-        font-size: 1.6rem;
+        height: 150px;
     }
-    textarea::placeholder {
-        font-size: 2rem;
-    }
+
     #info {
-        margin: 0.7rem 1rem;
-        padding: 1rem 1rem;
-        font-size: 0.8rem;
+        flex-direction: column;
+        align-items: flex-start;
     }
-    #botones {
-        text-align: center;
-        padding: 0rem 0rem;
-    }
-    .boton-grande {
-        width: 21rem;
-    }
-    #encriptar {
-        margin: 0.6rem auto;
-        padding: 1rem 1rem;
-        display: block;
-        scale: .8;
-    }
-    #desencriptar {
-        margin: 0.6rem auto;
-        padding: 1rem 1rem;
-        display: block;
-        scale: .8;
-    }
-    .derecha {
-        padding: 1rem 1rem;
-        margin: 1rem 1rem;
-    }
-    .derecha p {
-        font-size: 1rem;
-        margin: 0 0.4rem;
-    }
-    #imagenMuñeco, #textoEncontrado {
-        width: 70%;
-    }
-    #textoNoEncontrado h2 {
-        font-size: 1.5rem;
-        padding: 1rem 1rem;
-    }
-    #textoNoEncontrado p {
-        margin: 0rem 0rem 1rem 0rem;
-    }
-    #copiar {
-        scale: .7;
-        bottom: 0.3rem;
-        right: 0.6rem;
-    }
-    footer {
-        position: relative;
-        bottom: 0;
-    }
-    footer div {
-        margin: 0.25rem 1rem 0rem 1rem;
-    }
-    footer p {
-        font-size: .6rem;
-    }
-    footer span {
-        font-size: .8rem;
-    }
-    footer ul {
-        margin: 0rem 1rem;
-        display: block;
-    }
-    li {
-        scale: .55;
-        margin: 0rem 0rem;
+
+    #info img {
+        margin-bottom: 0.5rem;
     }
 }
