@@ -2,48 +2,51 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Alura Challenge - Encriptador de Texto</title>
-    <link rel="shortcut icon" href="imagenes/encriptador.jpeg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <title>Encriptador de texto</title>
 </head>
 <body>
+    <header>
+        <div id="logoAlura">
+            <img src="imagenes/logoalura.png" alt="Logo de Alura">
+        </div>
+        <button id="darkModeToggle">🌙</button>
+    </header>
     <main>
         <section class="ingreso-texto">
-            <div id="logoAlura"><img src="imagenes/logoalura.png" alt="logo de alura"></div>
             <div id="areaTextoIngreso">
-                <textarea id="textoIngreso" cols="45" rows="15" placeholder="Ingrese texto aquí..."></textarea>
+                <textarea id="textoIngreso" placeholder="Ingresa el texto aquí"></textarea>
             </div>
             <div id="info">
-                <img src="imagenes/vector.png" alt="signo de advertencia">
+                <img src="imagenes/vector.png" alt="Signo de advertencia">
                 <p>Solo letras minúsculas y sin acentos.</p>
             </div>
             <div id="botones">
-                <button class="boton-grande" id="encriptar" onclick="encriptar()">Encriptar</button>
-                <button class="boton-grande" id="desencriptar" onclick="desencriptar()">Desencriptar</button>
+                <button id="encriptar" class="boton-grande">Encriptar</button>
+                <button id="desencriptar" class="boton-grande">Desencriptar</button>
+                <button id="limpiar" class="boton-grande">Limpiar</button>
             </div>
         </section>
-
         <section class="sale-texto">
-            <!-- Contenedor reutilizado para el muñeco, imágenes de encriptado/desencriptado y resultados -->
-            <div class="derecha" id="resultado">
-                <img id="imagenMuñeco" src="imagenes/Muñeco.png" alt="Muñeco buscando mensaje">
-                <img id="imagenEncriptado" src="imagenes/Encriptado.jpg" alt="Texto encriptado" style="display:none;">
-                <img id="imagenDesencriptado" src="imagenes/Desencriptado.jpg" alt="Texto desencriptado" style="display:none;">
+            <div id="resultado" class="derecha">
+                <img src="imagenes/Muñeco.png" alt="Muñeco buscando mensaje" id="imagenMuñeco">
+                <img src="imagenes/Encriptado.jpg" alt="Texto encriptado" id="imagenEncriptado" style="display:none;">
+                <img src="imagenes/Desencriptado.jpg" alt="Texto desencriptado" id="imagenDesencriptado" style="display:none;">
                 <div id="textoNoEncontrado">
                     <h2>Ningún mensaje fue encontrado.</h2>
                     <p>Ingresa el texto que desees encriptar o desencriptar.</p>
                 </div>
                 <div id="textoEncontrado" style="display:none;">
-                    <textarea id="textoSalida" cols="45" rows="10"></textarea>
-                    <button id="copiar" onclick="copiarTexto()">
-                        <img src="imagenes/copiar.png" alt="boton copiar">
+                    <textarea id="textoSalida" readonly></textarea>
+                    <button id="copiar">
+                        <img src="imagenes/copiar.png" alt="Icono de copia">
+                        Copiar
                     </button>
-                    <div id="textoCopiado" style="display:none;"><p>Texto copiado.</p></div>
+                    <div id="textoCopiado" style="display:none;">
+                        <p>Texto copiado.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -54,12 +57,8 @@
             <span>Elizabeth Diaz Familia</span>
         </div>
         <ul>
-            <li><a href="https://linkedin.com/in/eli-familia/" target="_blank">
-                <img src="imagenes/linkedin.png" alt="linkedin">
-            </a></li>
-            <li><a href="https://github.com/Lizzy0981" target="_blank">
-                <img src="imagenes/github.png" alt="github">
-            </a></li>
+            <li><a href="https://linkedin.com/in/eli-familia/" target="_blank"><img src="imagenes/linkedin.png" alt="LinkedIn"></a></li>
+            <li><a href="https://github.com/Lizzy0981" target="_blank"><img src="imagenes/github.png" alt="GitHub"></a></li>
         </ul>
     </footer>
     <script src="script.js"></script>
